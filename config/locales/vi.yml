@@ -40,6 +40,18 @@ vi:
   account_not_activated: "Tài khoản chưa được kích hoạt"
   activate: "Kích hoạt"
   change: "Thay đổi"
+  check_mail: "Vui lòng kiểm tra mail để kích hoạt tài khoản"
+  forgot_password: "(Quên mật khẩu)"
+  email_reset_password: "Đã gửi email với yêu cầu làm mới mật khẩu"
+  email_not_found: "Không tìm thấy email"
+  forgot_password: "Quên mật khẩu"
+  reset_password: "Làm mới mật khẩu"
+  user_not_found: "Không tìm thấy người dùng"
+  change_success: "Thay đổi thành công"
+  user_is_in_actived: "Người dùng chưa được kích hoạt"
+  password_reset_has_expired: "Việc đặt mật khẩu đã hết hạn"
+  expire: "Đường dẫn này sẽ hết hạn trong vòng 2 giờ"
+  content_reset_password: "Nếu bạn không yêu cầu đặt lại mật khẩu của mình, vui lòng bỏ qua email này và mật khẩu của bạn sẽ được giữ nguyên."
   activerecord:
     models:
       user: "Người dùng"

@@ -1,6 +1,6 @@
 class AccountActivationsController < ApplicationController
   before_action :find_user, only: :edit
-  
+
   def edit
     if !@user.activated && @user.authenticated?(:activation, params[:id])
       @user.activate
