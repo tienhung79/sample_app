@@ -2,7 +2,8 @@ vi:
   title: "Ví dụ cơ bản về Rails"
   home: "Trang chủ"
   help: "Trợ giúp"
-  login : "Đăng nhập"
+  log_in : "Đăng nhập"
+  log_out: "Đăng xuất"
   sign_up : "Đăng ký"
   create_my_account: "Tạo tài khoản"
   confirmation: "Xác nhận mật khẩu"
@@ -11,6 +12,9 @@ vi:
   error: "Lỗi!"
   English: "Tiếng Anh"
   Vietnamese: "Tiếng Việt"
+  sign_up_now: "Đăng ký ngay!"
+  account: "Tài khoản"
+  password: "Mật khẩu"
 
   activerecord:
     models:
@@ -20,4 +24,3 @@ vi:
         name: "Tên"
         email: "Email"
         password: "Mật Khẩu"
-  

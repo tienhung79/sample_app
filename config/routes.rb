@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   post "/signup", to: "users#create"
   resources :users, only: :show
 
+  get "/login", to: "session#new"
+  post "/login", to: "session#create"
+  delete "/logout", to: "session#destroy"
+
 end
