@@ -24,6 +24,15 @@ module RailsTutorial
 
     config.i18n.default_locale = :en
     config.i18n.available_locales = [:en, :vi]
+
+    # # ...
+    # config.before_configuration do
+    #   config.x.settings = Config.load_and_set_settings(
+    #     Rails.root.join('config', 'application.yml'),
+    #     Rails.env
+    #   )
+    # end
+    # # ...
   end
 end
 
