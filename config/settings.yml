@@ -1,0 +1,4 @@
+# config/application.yml
+digits:
+  length_50: 50
+  length_255: 255
