@@ -4,7 +4,9 @@ class UsersController < ApplicationController
   before_action :correct_user, only: %i(edit update)
   before_action :admin_user, only: :destroy
 
-  def show; end
+  def show
+    @page, @microposts = pagy @user.microposts, items: Settings.digits.page_10
+  end
 
   def new
     @user = User.new
@@ -45,6 +47,18 @@ class UsersController < ApplicationController
     redirect_to users_url
   end
 
+  def following
+    @title = t("following")
+    @pagy, @users = pagy(@user.following, items: 10)
+    render :show_follow
+  end
+
+  def followers
+    @title = t("followers")
+    @pagy, @users = pagy(@user.followers, items: 10)
+    render :show_follow
+  end
+
   private
 
   def user_params
@@ -58,14 +72,6 @@ class UsersController < ApplicationController
 
     flash[:alert] = t("not_find_user")
     redirect_to root_path
-  end
-
-  def logged_in_user
-    return if logged_in?
-
-    flash[:danger] = t("please_log_in")
-    store_location
-    redirect_to login_url
   end
 
   def correct_user
