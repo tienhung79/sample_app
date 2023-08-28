@@ -2,4 +2,5 @@
 digits:
   length_50: 50
   length_255: 255
+  length_6: 6
   regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
