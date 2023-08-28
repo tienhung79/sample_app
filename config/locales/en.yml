@@ -46,3 +46,5 @@ en:
   sign_up_now: "Sign up now!"
   account: "Account"
   password: "Password"
+  result_login: "Login Fail"
+  remember: "Remember me on this computer"
