@@ -3,4 +3,16 @@ vi:
   home: "Trang chủ"
   help: "Trợ giúp"
   login : "Đăng nhập"
+  sign_up : "Đăng ký"
+  create_my_account: "Tạo tài khoản"
+  
+
+  activerecord:
+    models:
+      user: "Người dùng"
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật Khẩu"
   

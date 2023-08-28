@@ -1,8 +1,5 @@
  <header class="navbar navbar-fixed-top navbar-inverse">
       <div class="container">
-      <%= link_to "English", locale:"en" %>
-      <%= link_to "Vietnamese", locale:"vi" %>
-
           <%= link_to "sample app", "#", id: "logo" %>
           <nav>
             <ul class="nav navbar-nav navbar-right">
@@ -11,5 +8,9 @@
               <li><%= link_to I18n.t("login"), "#" %></li>
             </ul>
          </nav>
+      </div>
+      <div style="float:right">
+        <%= link_to "English / ", locale:"en" %>
+        <%= link_to "Vietnamese", locale:"vi" %>
       </div>
  </header>
