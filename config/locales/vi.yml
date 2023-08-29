@@ -3,4 +3,21 @@ vi:
   home: "Trang chủ"
   help: "Trợ giúp"
   login : "Đăng nhập"
+  sign_up : "Đăng ký"
+  create_my_account: "Tạo tài khoản"
+  confirmation: "Xác nhận mật khẩu"
+  notification: "Tạo tài khoản thành công"
+  not_found_user: "Không tìm thấy người dùng!"
+  error: "Lỗi!"
+  English: "Tiếng Anh"
+  Vietnamese: "Tiếng Việt"
+
+  activerecord:
+    models:
+      user: "Người dùng"
+    attributes:
+      user:
+        name: "Tên"
+        email: "Email"
+        password: "Mật Khẩu"
   

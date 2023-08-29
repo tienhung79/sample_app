@@ -34,3 +34,12 @@ en:
   home : "Home"
   help: "Help"
   login : "Log in"
+  sign_up: "Sign Up"
+  create_my_account: "Create my account"
+  confirmation: "confirmation"
+  notification: "created successful"
+  not_found_user: "Not found user!"
+  error: "Error!"
+  English: "English"
+  Vietnamese: "Vietnamese"
+  
