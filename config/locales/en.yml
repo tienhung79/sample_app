@@ -33,7 +33,8 @@ en:
   title: "Ruby on Rails Tutorial Sample App"
   home : "Home"
   help: "Help"
-  login : "Log in"
+  log_in : "Log in"
+  log_out: "Log out"
   sign_up: "Sign Up"
   create_my_account: "Create my account"
   confirmation: "confirmation"
@@ -42,4 +43,6 @@ en:
   error: "Error!"
   English: "English"
   Vietnamese: "Vietnamese"
-  
+  sign_up_now: "Sign up now!"
+  account: "Account"
+  password: "Password"
