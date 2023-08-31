@@ -48,6 +48,9 @@ gem "bootstrap-sass", "3.4.1"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html]
 # gem "image_processing", "~> 1.2"
+gem "image_processing", "1.9.3"
+gem "mini_magick", "4.9.5"
+gem "active_storage_validations", "0.8.2"
 
 # Add bcrypt
 gem "bcrypt", "3.1.13"
@@ -57,6 +60,9 @@ gem "rails-i18n"
 
 # Gem config
 gem "config"
+gem "faker"
+gem "figaro"
+gem "pagy"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html
@@ -84,6 +90,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem "faker"
-gem "pagy"

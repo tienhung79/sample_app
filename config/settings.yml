@@ -3,4 +3,7 @@ digits:
   length_50: 50
   length_255: 255
   length_6: 6
+  length_140: 140
+  number_of_page: 10
+  page_10: 10
   regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
