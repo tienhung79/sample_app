@@ -12,7 +12,9 @@ class User < ApplicationRecord
   has_secure_password
 
   before_save :down_case
-  attr_accessor :remember_token
+  attr_accessor :remember_token, :activation_token, :reset_token
+
+  before_create :create_activation_digest
 
   class << self
     def digest string
@@ -38,13 +40,43 @@ class User < ApplicationRecord
     update_column :remember_digest, nil
   end
 
-  def authenticated? remember_token
-    BCrypt::Password.new(remember_digest).is_password? remember_token
+  def authenticated? attribute, token
+    digest = send "#{attribute}_digest"
+    return false unless digest
+
+    BCrypt::Password.new(digest).is_password? token
+  end
+
+  def activate
+    update_columns activated: true, activated_at: Time.zone.now
+  end
+
+  def send_activation_email
+    UserMailer.account_activation(self).deliver_now
+  end
+
+  def create_reset_digest
+    self.reset_token = User.new_token
+    update_columns reset_digest: User.digest(reset_token),
+                   reset_sent_at: Time.zone.now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
   end
 
   private
 
   def down_case
     email.downcase!
+  end
+
+  def create_activation_digest
+    self.activation_token = User.new_token
+    self.activation_digest = User.digest(activation_token)
   end
 end

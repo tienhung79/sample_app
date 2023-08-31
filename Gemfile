@@ -57,6 +57,9 @@ gem "rails-i18n"
 
 # Gem config
 gem "config"
+gem "faker"
+gem "figaro"
+gem "pagy"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html
@@ -84,6 +87,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-gem "faker"
-gem "pagy"
