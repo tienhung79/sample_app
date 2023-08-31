@@ -1,0 +1,4 @@
+# config/application.yml
+SMTP_USERNAME: 1a0e6a751da11a
+SMTP_PASSWORD: 165c3cfffc0071
+
