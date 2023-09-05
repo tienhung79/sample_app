@@ -11,15 +11,15 @@ class UsersController < ApplicationController
   end
 
   def index
-    @pagy, @users = pagy(User.all, items: Settings.digits.num_of_page)
+    @pagy, @users = pagy(User.all, items: 10)
   end
 
   def create
     @user = User.new user_params
     if @user.save
-      flash[:success] = t("notification")
-      log_in @user
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = t("check_mail")
+      redirect_to root_url
     else
       render :new, status: :unprocessable_entity
     end
@@ -55,6 +55,7 @@ class UsersController < ApplicationController
   def find_user
     @user = User.find_by id: params[:id]
     return if @user
+
     flash[:alert] = t("not_find_user")
     redirect_to root_path
   end
