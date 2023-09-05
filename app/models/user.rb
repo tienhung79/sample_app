@@ -6,6 +6,9 @@ class User < ApplicationRecord
     length: {maximum: Settings.digits.length_255},
     format: {with: Settings.digits.regex}, uniqueness: true
 
+  validates :password, presence: true,
+    length: {minimum: Settings.digits.length_6}, allow_nil: true
+
   has_secure_password
 
   before_save :down_case
@@ -37,15 +40,6 @@ class User < ApplicationRecord
 
   def authenticated? remember_token
     BCrypt::Password.new(remember_digest).is_password? remember_token
-  end
-
-  def self.digest string
-    cost = if ActiveModel::SecurePassword.min_cost
-             BCrypt::Engine::MIN_COST
-           else
-             BCrypt::Engine.cost
-           end
-    BCrypt::Password.create string, cost:
   end
 
   private
