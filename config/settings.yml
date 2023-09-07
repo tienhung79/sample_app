@@ -4,4 +4,9 @@ digits:
   length_255: 255
   length_6: 6
   num_of_page: 10
+  length_140: 140
+  number_of_page: 10
+  page_10: 10
   regex: !ruby/regexp /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+format_image: <%= %w(image/jpeg image/gif image/png) %>
